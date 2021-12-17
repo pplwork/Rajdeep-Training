@@ -1,6 +1,6 @@
 import {useState, useEffect} from "react";
 
-const useFetch = (url) => {
+const useFetch = (url) => {   //custom hook
     const [data, setData] = useState(null);
     const [isPending,setIsPending]=useState(true);
     const [error,setError]= useState(null);
@@ -32,7 +32,7 @@ const useFetch = (url) => {
            }
           
          })
-         return ()=> abortCont.abort();
+         return ()=> abortCont.abort();  //cleanup function
        },[url]);
 
        return {data,isPending,error}
