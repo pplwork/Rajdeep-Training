@@ -49,17 +49,17 @@ body {
 
 }
 
-.logo-box {
+.header__logo-box {
     position: absolute;
     top: 4rem;
     left: 4rem;
 }
 
-.logo {
+.header__logo {
     height: 4.5rem;
 }
 
-.text-box{
+.header__text-box{
     position: absolute;
     top: 40%;
     left: 50%;
@@ -76,7 +76,7 @@ body {
     margin-bottom: 6rem;
 }
 
-.heading-primary-main{
+.heading-primary--main{
     display: block; /*auto line-break on both ends */
     font-size: 6rem;
     font-weight: 400;
@@ -89,7 +89,7 @@ body {
     animation-timing-function: ease-out; /*how the animation will appear, here ease out means it will be slow at first and fast afterwards */
 }
 
-.heading-primary-sub{
+.heading-primary--sub{
     display: block;
     font-size: 2rem;
     font-weight: 700;
@@ -162,7 +162,7 @@ body {
     transform: translateY(-1.5px);
 }
 
-.btn-white {
+.btn--white {
     background-color: #fff;
     color: #777
 }
@@ -194,7 +194,7 @@ body {
     opacity: 0;
 }
 
-.btn-animated{
+.btn--animated{
     animation: moveInButton .4s ease-out .6s;
     animation-fill-mode: backwards; /*this property sets how animation applies styles to its targets before and after its execution*/
 }
