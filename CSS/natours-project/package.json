@@ -1,0 +1,17 @@
+{
+  "name": "natours-project",
+  "version": "1.0.0",
+  "description": "Landing page for Natours",
+  "main": "index.js",
+  "scripts": {
+    "compile:sass": "node-sass sass/main.scss css/style.css -w"
+  },
+  "author": "Rajdeep",
+  "license": "ISC",
+  "devDependencies": {
+    "node-sass": "^7.0.0"
+  },
+  "dependencies": {
+    "jquery": "^3.6.0"
+  }
+}
