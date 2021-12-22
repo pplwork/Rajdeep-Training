@@ -1,0 +1,61 @@
+.btn {
+    &:link,
+    &:visited {  /*pseudo class-style elements under special condition*/
+        text-transform: uppercase;
+        text-decoration: none;
+        padding: 1.5rem 4rem;
+        display: inline-block;
+        border-radius: 10rem;
+        transition: all 0.2s;
+        position: relative;
+    
+    }
+    
+    &:hover{
+        transform: translateY(-3px);
+        box-shadow: 0 7px 15px rgba($color-black,0.5);
+    
+    }
+    
+    &:active{ /*when we click the button*/
+        transform: translateY(-1.5px);
+        box-shadow: 0 3.5px 7.5px rgba($color-black,0.5);
+    }
+    
+    &--white {
+        background-color: $color-white;
+        color: $color-grey-dark;
+    }
+    
+    &::after{ /*this selector inserts something after the content of each selected elements */
+        content: ""; /*this property must be mentioned while using after even if its empty */
+        display: inline-block;
+        height: 100%;
+        width: 100%;
+        border-radius: 10rem;
+        position: absolute;
+        top:0;
+        left:0;
+        z-index: -1;
+        transition: all .4s;
+    }
+    
+    &-white::after{
+        background-color: $color-white;
+    
+    }
+    
+    &-white::after {
+        background-color:$color-white;
+    }
+    
+    &:hover::after{
+        transform: scaleX(1.25) scaleY(1.4);
+        opacity: 0;
+    }
+    
+    &--animated{
+        animation: moveInButton .4s ease-out .6s;
+        animation-fill-mode: backwards; /*this property sets how animation applies styles to its targets before and after its execution*/
+    }
+    }
