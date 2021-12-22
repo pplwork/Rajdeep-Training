@@ -10,10 +10,20 @@
 @import "components/button";
 
 @import "layout/header";
+@import "layout/grid";
 
 @import "pages/home";
 
 
+//Responsive Design
+//1. Fluid grids and layouts- to allow content to easily adapt to the current viewport width used
+//to browse the website. Uses % rather than px for all layout-related lengths
+
+//2. Flexible/Responsive images- Images behave differently than text content, and so we need to ensure that
+//they also adapt nicely to the current viewport
+
+//3. Media queries- To change styles on certain viewport widths(breakpoints), allowing us to create
+//different version of our website for different widths
 
 
 
