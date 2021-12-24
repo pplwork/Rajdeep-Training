@@ -1,85 +1,96 @@
 .btn {
+    &,
     &:link,
-    &:visited {  /*pseudo class-style elements under special condition*/
+    &:visited {
         text-transform: uppercase;
         text-decoration: none;
         padding: 1.5rem 4rem;
         display: inline-block;
         border-radius: 10rem;
-        transition: all 0.2s;
+        transition: all .2s;
         position: relative;
-    
+        font-size: 1.6rem;
+
+        //Change for the <button> element
+        border: none;
+        cursor: pointer;
     }
     
-    &:hover{
+    &:hover {
         transform: translateY(-3px);
-        box-shadow: 0 7px 15px rgba($color-black,0.5);
-    
+        box-shadow: 0 1rem 2rem rgba($color-black,.2);
+
+        &::after {
+            transform: scaleX(1.4) scaleY(1.6);
+            opacity: 0;
+        }
     }
     
-    &:active{ /*when we click the button*/
-        transform: translateY(-1.5px);
-        box-shadow: 0 3.5px 7.5px rgba($color-black,0.5);
+    &:active,
+    &:focus {
+        outline: none;
+        transform: translateY(-1px);
+        box-shadow: 0 .5rem 1rem rgba($color-black,.2);
     }
     
     &--white {
         background-color: $color-white;
         color: $color-grey-dark;
+
+        &::after {
+            background-color: $color-white;
+        }
+    }
+
+    &--blue {
+        background-color: $color-primary;
+        color: $color-white;
+
+        &::after {
+            background-color: $color-primary;
+        }
     }
     
-    &::after{ /*this selector inserts something after the content of each selected elements */
-        content: ""; /*this property must be mentioned while using after even if its empty */
+    &::after {
+        content: "";
         display: inline-block;
         height: 100%;
         width: 100%;
         border-radius: 10rem;
         position: absolute;
-        top:0;
-        left:0;
+        top: 0;
+        left: 0;
         z-index: -1;
         transition: all .4s;
     }
     
-    &-white::after{
-        background-color: $color-white;
-    
+    &--animated {
+        animation: moveInBottom .5s ease-out .75s;
+        animation-fill-mode: backwards;
     }
-    
-    &-white::after {
-        background-color:$color-white;
-    }
-    
-    &:hover::after{
-        transform: scaleX(1.25) scaleY(1.4);
-        opacity: 0;
-    }
-    
-    &--animated{
-        animation: moveInButton .4s ease-out .6s;
-        animation-fill-mode: backwards; /*this property sets how animation applies styles to its targets before and after its execution*/
-    }
+}
+
+.btn-text {
+    &:link,
+    &:visited {
+        font-size: 1.6rem;
+        color: $color-primary;
+        display: inline-block;
+        text-decoration: none;
+        border-bottom: 1px solid $color-primary;
+        padding: 3px;
+        transition: all .2s;
     }
 
-    .btn-text{
-        &:link,
-        &:visited {
-            font-size: 1.6rem;
-            color: $color-primary;
-            display: inline-block;
-            text-decoration: none;
-            border-bottom: 1px solid $color-primary;
-            padding:3px;
-            transition: all 0.2s;
-            ;
-        }
-        &:hover{
-            background-color: $color-primary;
-            color: $color-white;
-            box-shadow: 0 1rem 2rem rgba($color-black, 0.3);
-            transform: translateY(-2px);
-        }
-        &:active{
-            box-shadow: 0 0.5rem 1rem rgba($color-black, 0.3);
-            transform: translateY(0);
-        }
+    &:hover {
+        background-color: $color-primary;
+        color: $color-white;
+        box-shadow: 0 1rem 2rem rgba($color-black, .15);
+        transform: translateY(-2px);
     }
+
+    &:active {
+        box-shadow: 0 .5rem 1rem rgba($color-black, .15);
+        transform: translateY(0);
+    }
+}
