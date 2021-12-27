@@ -1,0 +1,33 @@
+.clock {
+    
+    &__container {
+        margin: 0 auto;
+        width: 50rem;
+        //background-color: $color-white;
+        border-radius: 8px;
+    }
+
+    &__span {
+        display: flex;
+        margin: 0 auto;
+        padding:3rem ;
+        padding-bottom: 1rem;
+        
+        justify-content: center;
+        font-size: 6rem;
+        text-align: center;
+        color: $color-clock-blue;
+
+    }w
+
+    &__paragraph {
+        display: inline-block;
+        font-size: inherit;
+        color: $color-clock-blue;
+        
+        &--primary {
+            color: $color-secondary-light;
+        }
+    }
+
+}

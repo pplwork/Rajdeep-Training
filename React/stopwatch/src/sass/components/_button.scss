@@ -1,0 +1,71 @@
+.btn--white {
+    background-color: $color-primary-light;
+    border: none;
+    margin: 1rem;
+    padding: 1rem 3rem ;
+}
+
+.btn {
+    display: inline-block;
+    margin: 1rem;
+    border: none;
+    padding: 1.5rem 4rem ;
+    cursor: pointer;
+    background-color: $color-primary-dark;
+    color: $color-white;
+    font-size: 2rem;
+    border-radius: 8px;
+    transition: all .3s;
+
+    &:link,
+    &:visited{
+        color: $color-white;
+        text-decoration: none;
+    }
+    &:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 1rem 2rem rgba($color-black,.2);
+
+        &::after {
+            transform: scaleX(1.4) scaleY(1.6);
+            opacity: 0;
+        }
+    }
+    
+    &__block {
+        text-align: center;
+        width: 100%;
+        padding:1rem ;
+    }
+    &__block > * {
+        display: none;
+        visibility: hidden;
+        
+        opacity: 0;
+    }
+
+    &__block-0 > &--start {
+        display: inline-block;
+        visibility: visible;
+        
+        opacity: 1;
+    }
+
+    &__block-1 > &--lap,&__block-1 >&--pause{
+        display: inline-block;
+      
+        visibility: visible;
+
+        opacity: 1;
+
+    }
+
+    &__block-2 > &--reset,&__block-2 > &--resume {
+        display: inline-block;
+        
+        visibility: visible;
+
+        opacity: 1;
+
+    }
+}
