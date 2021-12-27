@@ -1,5 +1,5 @@
 import Lap from "./lap";
-import timeToDigits from "../utilities/timeConvert";
+import timeConvert from "../utilities/timeConvert";
 
 function LapBlock(props) {
     return (
@@ -12,7 +12,7 @@ function LapBlock(props) {
                 </tr>
             </thead>
             <tbody className="lap__table--body">
-                {props.laps.map((lap, id) => <Lap key={`${id}`} count={id + 1} lastLap={props.lastLap} {...timeToDigits(lap)} diff={id === 0 ? timeToDigits(lap) : timeToDigits(props.laps[id] - props.laps[id - 1])} />)}
+                {props.laps.map((lap, id) => <Lap key={`${id}`} count={id + 1} lastLap={props.lastLap} {...timeConvert(lap)} diff={id === 0 ? timeConvert(lap) : timeConvert(props.laps[id] - props.laps[id - 1])} />)}
             </tbody>
         </table>
     )

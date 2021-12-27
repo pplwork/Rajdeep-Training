@@ -1,7 +1,7 @@
 import format from "../utilities/format"
 
 function Lap(props) {
-    // console.log(props.diff)
+    
     return (
         <tr className={`lap ${props.count === props.lastLap + 1 ? "lap__last" : ""}`}>
             <td className={`lap__text lap__count `}>{format(props.count)}</td>
