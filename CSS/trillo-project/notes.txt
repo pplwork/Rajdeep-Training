@@ -1,0 +1,24 @@
+Flexbox is a new module that makes it easy to align elements 
+to one another, in different directions and orders.
+The main idea behind flexbox is to give the container the ability 
+to expand and to shrink elements.
+Less and more readable and logical code. 
+
+
+The main area in flex is flex container in which we have flex items.
+The x-axis is main axis and y-axis is cross axis
+We can access flexbox by setting display: flex;
+
+Container commands - 
+flex-derection: row | row-reverse | coloumn | column-reverse
+flex-wrap: nowrap | wrap-reverse
+justify-content: flex-start | flex-end | center | space-between | space-around | space-evenly
+align-items: stretch | flex-start | flex-end | center | baseline
+align-content: flex-start | flex-end | center | space-between | space-around
+
+Item commands-
+align-self: auto | stretch | flex-start | flex-end | center | baseline
+order: 0 | <integer>
+flex-grow: 0 | <integer>
+flex-shrink: 1 | <integer>
+flex-basic: auto | <length>

@@ -22,7 +22,7 @@ const Create = () => {
             console.log('New blog added')
             setIsPending(false);
             // history.go(-1);
-            history.push('/');
+            history.push('/'); // this will redirect to the given route
         })
        
   }
